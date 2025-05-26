@@ -1,0 +1,12 @@
+{
+  "name": "Jose-js-app",
+  "version": "1.0.0",
+  "description": "A simple JavaScript app served with nginx in Docker",
+  "main": "script.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+          "express":"4.18.2"
+        }
+}
