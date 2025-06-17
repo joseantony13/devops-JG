@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Football</title>
+</head>
+<body>
+  <h1>Welcome to the Football Game Page</h1>
+  <p>This is the football service served by NGINX.</p>
+</body>
+</html>
