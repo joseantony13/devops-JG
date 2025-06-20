@@ -1,7 +1,11 @@
 FROM nginx:alpine
 
-RUN rm -rf /usr/share/nginx/html
+# Set working directory
+WORKDIR /usr/share/nginx/html
 
-COPY /html /usr/share/nginx/html
+# Copy website files to nginx's default serving directory
+COPY html/ .
 
+# Expose port 80 (default for nginx)
 EXPOSE 80
+
