@@ -1,8 +1,11 @@
+# Use a lightweight Nginx image
 FROM nginx:alpine
 
-RUN rm -rf /usr/share/nginx/html/
+# Remove default Nginx HTML files
+RUN rm -rf /usr/share/nginx/html/*
 
-COPY site-content/ /usr/share/nginx/html
+# Copy your static site content into Nginx's default folder
+COPY . /usr/share/nginx/html/
 
+# Expose port 80
 EXPOSE 80
-  
