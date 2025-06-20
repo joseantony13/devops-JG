@@ -1,10 +1,11 @@
+# Use a lightweight Nginx image
 FROM nginx:alpine
 
-# Set working directory
-WORKDIR /usr/share/nginx/html
+# Remove default Nginx HTML files
+RUN rm -rf /usr/share/nginx/html/*
 
-# Copy website files to nginx's default serving directory
-COPY html/ .
+# Copy your static site content into Nginx's default folder
+COPY . /usr/share/nginx/html/
 
-# Expose port 80 (default for nginx)
+# Expose port 80
 EXPOSE 80
